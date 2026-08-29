@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="badge">CI/CD PROJECT</div>
+
+        <h1>Deployed with<br><span>GitHub Actions</span></h1>
+
+        <p>
+            This website is automatically deployed to Amazon S3
+            whenever code is pushed to GitHub.
+        </p>
+
+        <button id="deployBtn">Test Deployment</button>
+
+        <div id="message"></div>
+
+        <div class="architecture">
+            <div>GitHub</div>
+            <span>→</span>
+            <div>Actions</div>
+            <span>→</span>
+            <div>AWS OIDC</div>
+            <span>→</span>
+            <div>S3</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
