@@ -3,7 +3,7 @@ name: Deploy Static Site to S3
 on:
   push:
     branches:
-      -main
+      - main
   workflow_dispatch:
   
 permissions:
@@ -26,6 +26,7 @@ jobs:
 
       - name: Deploy Static Website to S3
         run : |
-          aws s3 sync . s3://github-actions-s3-vivek-20260829
-          --exclude ".git/*"
-          --delete
+          aws s3 sync . s3://github-actions-s3-vivek-20260829 \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --delete
